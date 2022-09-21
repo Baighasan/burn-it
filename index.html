@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Burn It!</a>
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <a href="webApp.html">Calorie Calculator</a>
+            <a href="quiz.html">Quiz</a>
+        </div>
+    </div>
+    <div class="headerSection">
+        <img src="img/burn.png" class="wide">
+    </div>
+
+    <div class="carouselSection">
+        <div class="slideshow">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 2</div>
+                <div class="imgTextContainer">
+                    <img src="img/calorieBackground.jpg" class="caloriePic">
+                    <h2 class="perfectUrWeight">Perfect Your Weight Management</h2><br>
+                    <h5 class="bestCalculator">Calculate daily calories and set goals with weekly pound losses</h5><br><br>
+                    <a href="webApp.html" class="button button1">Calorie Calculator</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 2</div>
+                <div class="imgTExtContainer">
+                    <img src="img/quiz.jpg" class="quizPic">
+                    <h2 class="ultimateTest">The ultimate test on calories/weight management</h2><br><br>
+                    <a href="quiz.html" class="button button1 center">Take The Test</a><br>
+                </div>
+            </div>
+    
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <br>
+        </div>
+
+    <div>
+        <h1 class="sectionTitle">Subscribe To Our Newsletter!</h1>
+        
+        <div class="login">
+            <div class="imgcontainer">
+                <span>
+                    <img src="img/img_avatar.png" alt="Avatar" class="avatar">
+                    <img src="img/img_avatar2.png" alt="Avatar 2" class="avatar">
+                </span>
+            </div>
+        
+            <div class="container">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="email" required>
+
+                <button type="button" id="emailButton" onclick="validate()">Enter</button>
+                <h2 id="emailText"></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Links to external javascript-->
+    <script src="js/app.js"></script>
+</body>
+</html>

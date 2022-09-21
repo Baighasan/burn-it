@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="overallMargin">
+        <div class="header">
+            <a href="#default" class="logo">Burn It!</a>
+            <div class="header-right">
+                <a href="index.html">Home</a>
+                <a href="webApp.html">Calorie Calculator</a>
+                <a href="quiz.html" class="active" >Quiz</a>
+            </div>
+        </div>
+    
+        <section>
+            <h2 class="sectionTitle">Test Your Knowledge</h2>
+            <h3 class="sectionSubtitle">How much do you know about calories and weight management?</h3>
+            <img src="img/NPI-FR-WeightManagement-1119-1200x400.jpg" class="quizBanner">
+        </section>
+
+        <section>
+            <div id="question1">
+                <div class="questionStyle">
+                    <h2 class="sectionTitle">Question 1:</h2>
+                    <h3 class="sectionSubtitle underline">Approximately how many calories are in a pound of stored body fat?</h3>
+                    <div class="quizMargin">
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="caloriesInBodyFat" value="2000" />
+                            <label class="form-control">2000</label>
+                        </span>
+                        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="caloriesInBodyFat" value="500" />
+                            <label class="form-control">500</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="caloriesInBodyFat" value="3500" />
+                            <label class="form-control">3500</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="caloriesInBodyFat" value="1729" />
+                            <label class="form-control">1729</label>
+                        </span>
+    
+                        <div class="buttonContainer">
+                            <button type="button" class="quizValidation" id="question1Button" onclick="question1Validation()">Submit</button>
+                        </div>
+                        <h3 id="question1Null"></h3>
+                    </div>
+                </div>    
+            </div>
+
+            <div id="question2">
+                <div class="questionStyle">
+                    <h2 class="sectionTitle">Question 2:</h2>
+                    <h3 class="sectionSubtitle underline">What are the main sources of calories in a typical person's diet?</h3>
+        
+                    <div class="quizMargin">
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="mainSourcesCalories" value="Carbohydrates" />
+                            <label class="form-control">Carbohydrates</label>
+                        </span>
+                        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="mainSourcesCalories" value="Proteins" />
+                            <label class="form-control">Proteins</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="mainSourcesCalories" value="Fat" />
+                            <label class="form-control">Fat</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="mainSourcesCalories" value="All of the above" />
+                            <label class="form-control">All of the above</label>
+                        </span>
+                        
+                        <div class="buttonContainer">
+                            <button type="button" class="quizValidation" id="question2Button" onclick="question2Validation()">Submit</button>
+                        </div>
+                        <h3 id="question2Null"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question3">
+                <div class="questionStyle">
+                    <h2 class="sectionTitle">Question 3:</h2>
+                    <h3 class="sectionSubtitle underline">How many calories are in one gram of protein, carbohydrates, and fat respectively?</h3>
+        
+                    <div class="quizMargin">
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="howManyCalories" value="529" />
+                            <label class="form-control">5, 2, 9 calories</label>
+                        </span>
+                        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="howManyCalories" value="224" />
+                            <label class="form-control">2, 3, 4 calories</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="howManyCalories" value="944" />
+                            <label class="form-control">9, 4, 4 calories</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="howManyCalories" value="449" />
+                            <label class="form-control">4, 4, 9 calories</label>
+                        </span>
+                        
+                        <div class="buttonContainer">
+                            <button type="button" class="quizValidation" id="question3Button" onclick="question3Validation()">Submit</button>
+                        </div>
+                        <h3 id="question3Null"></h3>
+                    </div>
+                </div>    
+            </div>
+
+            <div id="question4">
+                <div class="questionStyle">
+                    <h2 class="sectionTitle">Question 4:</h2>
+                    <h3 class="sectionSubtitle underline">Approximately how many grams of carbs are needed for your brain <br> to function properly?</h3>
+        
+                    <div class="quizMargin">
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="gramsCarbsBrain" value="200-250" />
+                            <label class="form-control">200 - 250 Grams Of Carbs</label>
+                        </span>
+                        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="gramsCarbsBrain" value="100" />
+                            <label class="form-control">100 Grams Of Carbs</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="gramsCarbsBrain" value="noCarbs" />
+                            <label class="form-control">Your Brain Doesn't Require Any Carbs To Function</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="gramsCarbsBrain" value="1020" />
+                            <label class="form-control">1020 Grams Of Carbs</label>
+                        </span>
+                        
+                        <div class="buttonContainer">
+                            <button type="button" class="quizValidation" id="question4Button" onclick="question4Validation()">Submit</button>
+                        </div>
+                        <h3 id="question4Null"></h3>
+                    </div>
+                </div>    
+            </div>
+
+            <div id="question5">
+                <div class="questionStyle">
+                    <h2 class="sectionTitle">Question 5:</h2>
+                    <h3 class="sectionSubtitle underline">Which one of the following macro nutrients converts into glucose the fastest?</h3>
+        
+                    <div class="quizMargin">
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="macroNutrientsGlucose" value="fats" />
+                            <label class="form-control">Fats</label>
+                        </span>
+                        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="macroNutrientsGlucose" value="carbs" />
+                            <label class="form-control">Carbohydrates</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="macroNutrientsGlucose" value="proteins" />
+                            <label class="form-control">Proteins</label>
+                        </span>
+        
+                        <span class="posQuizRadioButtons">
+                            <input type="radio" name="macroNutrientsGlucose" value="none" />
+                            <label class="form-control">None of the above</label>
+                        </span>
+                        
+                        <div class="buttonContainer">
+                            <button type="button" class="quizValidation" id="question5Button" onclick="question5Validation()">Submit</button>
+                        </div>
+                        <h3 id="question5Null"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="finalScore">
+                <div class="quizMargins">
+                    <h2 id="displayFinalScore"></h2>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    
+    <!-- Links to external javascript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
