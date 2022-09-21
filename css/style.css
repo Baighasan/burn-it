@@ -1,0 +1,642 @@
+/* Color Pallet Used:
+/https://colorhunt.co/palette/37066535589af14a16fc9918
+/*
+
+/* Resets padding and margins to 0 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    z-index: 2;
+    overflow: hidden;
+    background-color:#370665;
+    padding: 20px 5px;
+    position: fixed;
+    width: 100%;
+}
+
+/* Style the header links */
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+/* Style the logo link */
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+
+/* When the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+}
+
+.headerSection{
+    padding-top: 50px;
+}
+
+/* Styles the body's background */
+body{
+    background-color: #FC9918;
+}
+
+.wide{
+    width: 100%;
+}
+
+.sectionTitle{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.sectionSubtitle{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    line-height: 24px;
+    color:midnightblue;
+}
+
+.calculatorTitle{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.genderContainer{
+    text-align: center;
+    display: inline-flex;
+}
+
+:root{
+    --form-control-color: #35589A;
+}
+
+input[type="radio"]{
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+
+.form-control:focus-within {
+    color: var(--form-control-color);
+}
+
+.posGenderRadioButtons{
+    font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.spaceOut{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+.textInput {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+}
+
+textarea.textInput {
+    resize: vertical;
+}
+
+.textInput:focus {
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+}
+
+.textInput:focus {
+    /* ...existing styles */
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
+            40%), 0.8);
+}
+
+.textInput {
+    /* ...existing styles */
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.textInput:focus {
+    outline: 3px solid transparent;
+}
+
+.description{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+select {
+    /* A reset of styles, including removing the default dropdown arrow */
+    appearance: none;
+    /* Additional resets for further consistency */
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    outline: none;
+}
+
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+}
+
+.select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+}
+
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+}
+
+select,
+.select:after {
+    grid-area: select;
+}
+
+select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
+}
+
+/* Paddes the login section */
+.login{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 80px;
+}
+
+section{
+    padding-top: 75px;
+}
+
+#calculatorPadding{
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.quizBanner{
+    padding-top: 65px;
+    width: 100%;
+}
+
+/* Full-width inputs */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+#emailButton{
+    width: 100%;
+}
+
+.buttonContainer{
+    height: 100px;
+    position: relative;
+}
+.centerButton{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 30%;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+  /* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span#psw {
+    display: block;
+    float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+#caloriePic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-bottom: 10px;
+}
+
+.quizPic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.ultimateTest{
+    text-align: center;
+
+}
+
+/* Styles the buttons for index */
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6%;
+}
+
+.button1 {
+    background-color: red;
+    color: black; 
+    border: 2px solid #35589A;
+}
+
+.button1:hover {
+    background-color: #35589A;
+    color: white;
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.buttonCenter{
+    text-align: center;
+}
+
+.caloriePic{
+    height: 570px;
+}
+
+.carouselSection{
+    background-color: #fdca4d;
+}
+
+
+.imgTextContainer{
+    position: relative;
+    text-align: center;
+}
+
+.perfectUrWeight{
+/*  position: absolute; */
+    bottom: 400px;
+    left: 455px
+}
+
+.bestCalculator{
+/*  position: absolute; */
+    bottom: 335px;
+    left: 445px;
+}
+
+/* Slideshow container */
+.slideshow{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#displayCalories{
+    padding-bottom: 20px;
+    color: #35589A;
+}
+
+#displayIdealWeight{
+    padding-bottom: 20px;
+    color: #35589A;
+}
+
+#displayWeightChange{
+    padding-bottom: 20px;
+    color: #35589A;
+}
+
+#displayNewCalorieIntake{
+    padding-bottom: 20px;
+    color: #35589A;
+}
+
+#displayWeeksNeeded{
+    color: #35589A;
+}
+
+.posQuizRadioButtons{
+    font-family: system-ui, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    padding-top: 20px;
+}
+
+.quizMargin{
+    margin-left: 370px;
+    margin-right: 370px;
+    padding-bottom: 20px;
+}
+
+#quizPortal{
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+}
+
+#question2{
+    visibility: hidden;
+}
+
+#question3{
+    visibility: hidden;
+}
+
+#question4{
+    visibility: hidden;
+}
+
+#question5{
+    visibility: hidden;
+}
+
+.questionStyle{
+    background-color: #c47e21;
+    border-radius: 50%;
+    margin: 25px;
+}
+
+.quizValidation{
+    width: 50%;
+    border-radius: 7%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.underline{
+    text-decoration: underline;
+}
